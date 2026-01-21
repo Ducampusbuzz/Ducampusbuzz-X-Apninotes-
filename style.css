@@ -1,134 +1,80 @@
-/* =========================
-   GLOBAL BODY & BACKGROUND
-   ========================= */
-
 *{
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body{
-  margin: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-
-  /* BACKGROUND IMAGE */
-  background-image: url("bg-purple.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-
   min-height: 100vh;
+  background: url("bg-purple.png") no-repeat center center fixed;
+  background-size: cover;
   display: flex;
   justify-content: center;
+  align-items: flex-start;
+  padding: 30px 0;
 }
 
-/* =========================
-   MAIN CONTAINER
-   ========================= */
-
 .container{
-  width: 90%;
+  width: 100%;
   max-width: 420px;
-  padding: 30px 15px;
   text-align: center;
   color: white;
 }
 
-/* =========================
-   LOGOS (TOP)
-   ========================= */
-
-.logo-box{
+/* Logos */
+.logos{
   display: flex;
   justify-content: center;
   gap: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .logo{
   width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  object-fit: contain;
-
-  background: rgba(255,255,255,0.1);
-  padding: 10px;
-
-  box-shadow:
-    0 0 15px rgba(180,100,255,0.8),
-    0 0 30px rgba(180,100,255,0.6);
+  height: auto;
+  background: transparent;
+  box-shadow: 0 0 30px rgba(200,120,255,0.9);
 }
 
-/* =========================
-   MAIN HEADING
-   ========================= */
-
-.main-title{
-  font-size: 28px;
+/* Heading */
+.main-heading{
+  font-size: 26px;
+  font-weight: bold;
+  color: #e9c9ff;
+  text-shadow: 0 0 15px #c77dff;
   margin-bottom: 25px;
-  color: #e7c6ff;
-
-  text-shadow:
-    0 0 10px #b26cff,
-    0 0 25px #b26cff;
 }
 
-.main-title span{
-  color: #ffffff;
+.main-heading span{
+  color: #fff;
 }
 
-/* =========================
-   SECTION TITLES
-   ========================= */
-
+/* Section title */
 .section-title{
-  margin: 30px 0 15px;
-  font-size: 20px;
+  font-size: 18px;
+  margin: 20px 0 10px;
   font-weight: bold;
   color: #ffffff;
-
-  text-shadow:
-    0 0 8px #9f6bff,
-    0 0 15px #9f6bff;
 }
 
-/* =========================
-   BUTTONS (LINKS)
-   ========================= */
-
+/* Buttons */
 .btn{
-  display: block;
-  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
   text-decoration: none;
-  color: white;
-
   padding: 14px;
-  margin: 12px 0;
+  margin: 10px 0;
   border-radius: 30px;
-
-  font-size: 16px;
+  font-size: 15px;
   font-weight: bold;
-
-  box-shadow:
-    0 5px 15px rgba(0,0,0,0.4),
-    0 0 12px rgba(255,255,255,0.15);
-
-  transition: transform 0.2s ease;
+  color: white;
+  transition: 0.3s;
 }
 
-.btn:hover{
-  transform: scale(1.03);
-}
-
-.btn i{
-  margin-right: 8px;
-}
-
-/* =========================
-   SOCIAL COLORS
-   ========================= */
-
+/* Button colors */
 .insta{
   background: linear-gradient(45deg,#f58529,#dd2a7b,#8134af);
 }
@@ -141,64 +87,21 @@ body{
   background: #25d366;
 }
 
-/* =========================
-   DISABLED (COMING SOON)
-   ========================= */
-
 .disabled{
-  background: #666;
-  opacity: 0.75;
-  pointer-events: none;
+  background: rgba(200,200,200,0.4);
+  cursor: pointer;
 }
 
-/* =========================
-   DIVIDER
-   ========================= */
+/* Hover */
+.btn:hover{
+  transform: scale(1.03);
+  box-shadow: 0 0 15px rgba(255,255,255,0.5);
+}
 
+/* Divider */
 hr{
+  margin: 20px 0;
   border: none;
   height: 1px;
-  background: rgba(255,255,255,0.25);
-  margin: 30px 0;
-}
-
-/* =========================
-   COMING SOON PAGE
-   ========================= */
-
-.coming{
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  background: radial-gradient(circle,#4b1d6b,#0b0316);
-}
-
-.coming-box{
-  text-align: center;
-  padding: 40px;
-  border-radius: 20px;
-
-  box-shadow:
-    0 0 25px #b26cff,
-    0 0 50px #b26cff;
-}
-
-.coming-box h1{
-  font-size: 40px;
-  color: #d9a6ff;
-
-  text-shadow:
-    0 0 15px #b26cff,
-    0 0 30px #b26cff;
-}
-
-.coming-box p{
-  margin-top: 10px;
-  font-size: 16px;
-  color: #ffffff;
+  background: rgba(255,255,255,0.3);
 }
