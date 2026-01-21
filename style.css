@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Segoe UI", Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("./bg-royal-blue.png") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.box {
+  width: 92%;
+  max-width: 430px;
+  padding: 24px 18px;
+  text-align: center;
+}
+
+/* LOGOS */
+.top-logos {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.top-logos img {
+  width: 60px;
+  filter: drop-shadow(0 0 10px rgba(180,120,255,0.8));
+}
+
+/* NEON HEADING */
+.neon {
+  font-size: 26px;
+  font-weight: 800;
+  color: #e7d7ff;
+  margin-bottom: 18px;
+  text-shadow:
+    0 0 8px #a855f7,
+    0 0 16px #9333ea,
+    0 0 32px #7c3aed;
+}
+
+h2 {
+  color: #ffffff;
+  margin: 22px 0 12px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* BUTTONS */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 14px 0;
+  padding: 16px;
+  border-radius: 18px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #ffffff;
+  background: rgba(25, 30, 60, 0.55);
+  backdrop-filter: blur(12px);
+  box-shadow:
+    0 0 14px rgba(150,120,255,0.6),
+    0 0 36px rgba(150,120,255,0.35);
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.04);
+}
+
+/* WHATSAPP */
+.whatsapp {
+  background: rgba(20, 70, 40, 0.6);
+  box-shadow:
+    0 0 16px rgba(37,211,102,0.8),
+    0 0 40px rgba(37,211,102,0.5);
+}
+
+/* DISABLED */
+.disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* DIVIDER */
+hr {
+  border: none;
+  height: 1px;
+  margin: 30px 0;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255,255,255,0.4),
+    transparent
+  );
+}
